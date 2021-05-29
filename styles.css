@@ -188,7 +188,7 @@ main {
 }
 
 .button:hover {
-  border: 2px solid var(--light-gray);
+  border: 2px solid var(--trans-white);
   background-color: transparent;
   color: var(--light-gray);
 }
