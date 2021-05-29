@@ -1,0 +1,301 @@
+/*
+*  html5resetcss
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+/* Variables */
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --v-dark-cyan: hsl(179, 100%, 13%);
+  --trans-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+  --big-shoulders: 'Big Shoulders Display';
+  --lexend-deca: 'Lexend Deca';
+}
+
+/* Global Styles */
+
+main {
+  background-color: var(--trans-white);
+  color: var(--trans-white);
+  font-size: 15px;
+  font-family: var(--lexend-deca);
+}
+
+.button {
+  font-size: 18px;
+  padding: 15px 35px;
+  border-radius: 100px;
+  background-color: var(--light-gray);
+  border: 2px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+
+.button:hover {
+  border: 2px solid var(--trans-white);
+  background-color: transparent;
+  color: var(--light-gray);
+}
+
+h2 {
+  margin-top: 35px;
+  font-size: 42px;
+  letter-spacing: 1px;
+  color: var(--light-gray);
+  font-family: var(--big-shoulders);
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 35px;
+  line-height: 1.75;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 0 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cards .card {
+  padding: 0 65px 0 65px;
+}
+
+.cards .card img {
+  margin-top: 60px;
+}
+
+.cards .card:first-child {
+  background-color: var(--bright-orange);
+}
+
+.cards .card:first-child .button {
+  color: var(--bright-orange);
+}
+
+.cards .card:first-child .button:hover {
+  color: var(--light-gray);
+}
+
+.cards .card:nth-child(2) {
+  background-color: var(--dark-cyan);
+}
+
+.cards .card:nth-child(2) .button {
+  color: var(--dark-cyan);
+}
+
+.cards .card:nth-child(2) .button:hover {
+  color: var(--light-gray);
+}
+
+.cards .card:last-child {
+  background-color: var(--v-dark-cyan);
+}
+
+.cards .card:last-child .button {
+  color: var(--v-dark-cyan);
+}
+
+.cards .card:last-child .button:hover {
+  color: var(--light-gray);
+}
+
+.attribution {
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1030px) {
+  .cards .card {
+    padding: 0 35px 0 35px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 815px) {
+  .container {
+    padding-top: 50px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .cards .card {
+    padding: 0 40px;
+  }
+}
