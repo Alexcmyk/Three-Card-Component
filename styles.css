@@ -169,7 +169,7 @@ a {
 /* Global Styles */
 
 main {
-  background-color: var(--trans-white);
+  background-color: var(--light-gray);
   color: var(--trans-white);
   font-size: 15px;
   font-family: var(--lexend-deca);
